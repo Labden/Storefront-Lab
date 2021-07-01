@@ -1,0 +1,17 @@
+﻿@model Product
+
+<form asp-action="Result" method="post">
+    <p>Id: @Model.Id</p>
+    <p>Name: @Model.Name</p>
+    <p>Price: @Model.Price</p>
+    <p>Quantity: @Model.Quantity</p>
+    <p>Description: @Model.Description</p>
+
+    <input value="@Model.Name" type="hidden" maxlength="30" name="Name" />
+    <input value="@Model.Price" type="hidden" name="Price" />
+    <input value="@Model.Quantity" type="hidden" name="Quantity" />
+    <input value="@Model.Description" type="hidden" maxlength="300" name="Description" />
+    <input value="@Model.Id" type="hidden" name="Id" />
+
+    <button type="submit">Purchase @Model.Name</button>
+</form>

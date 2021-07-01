@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Product>
+
+@foreach (Product p in Model)
+{
+    <div style="border: 1px orange">
+        <p>Id: @p.Id</p>
+        <p>Name: @p.Name</p>
+        <p>Price: @p.Price</p>
+        <p>Quantity: @p.Quantity</p>
+        <p>Description: @p.Description</p>
+
+        <a asp-action="Buy" asp-controller="Storefront" asp-route-Id="@p.Id">Buy @p.Name</a>
+    </div>
+}

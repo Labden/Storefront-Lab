@@ -1,0 +1,16 @@
+﻿@model Product
+
+<h2>Name: @Model.Name</h2>
+<p>Id: @Model.Id</p>
+<p>Price: @Model.Price</p>
+<p>Quantity: @Model.Quantity</p>
+<p>Description: @Model.Description</p>
+
+<form method="post">
+    <input value="@Model.Name" type="hidden" maxlength="30" name="Name" />
+    <input value="@Model.Price" type="hidden" name="Price" />
+    <input value="@Model.Quantity" type="hidden" name="Quantity" />
+    <input value="@Model.Description" type="hidden" maxlength="300" name="Description" />
+
+    <input type="submit" value="I am sure I wish to delete @Model.Name" />
+</form>
